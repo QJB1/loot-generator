@@ -139,7 +139,7 @@ public class LootGenerator {
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
             if (line.isBlank()) continue;
-            // split into 3 columns - name, minac, maxac
+            // split into 3 cols - name, minac, maxac
             String[] parts = line.split("\t", 3);
             if (parts.length < 3) continue;
             String name = parts[0];
