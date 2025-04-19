@@ -1,1 +1,49 @@
-DarkHunter	CorruptRogue	2	Act 1 H2H ASpiderMagus	EvilSpiders	23	Act 3 H2H BApparition	Wraith	20	Act 2 Wraith CQuillRat	SpikeFiend	1	Quill 1TrappedSoul	special	30	Trapped SoulUndead RatMan	Fetish	10	Act 1 H2H CDefiledWarrior	ReanimatedHorde	42	Act 5 H2H CDiablo	Boss	40	DiabloSuckerNest	SuckerNest	6	Act 1 H2H BCorpulent	Regurgitator	24	Act 4 H2H ASaberCat	PantherWoman	15	Act 2 H2H ADoomKnight	Undead Horror	24	Act 4 H2H AHellCat	PantherWoman	19	Act 2 H2H CRazorSpine	SpikeFiend	9	Quill 4SandRaider	SandRaider	13	Act 2 H2H AHellSwarm	Swarm	22	Swarm 2WarpedShaman	FallenShaman	40	Act 5 Cast CHorrorMage	Skeleton	17	Act 2 Cast BTempleGuard	BaboonDemon	24	Act 3 H2H BGroper	Finger Mage	24	Act 4 Wraith ABurningDeadMage	Skeleton	14	Act 2 Cast ABoneMage	Skeleton	10	Act 1 Cast COblivionKnight	Undead Horror	30	Act 4 H2H BFoulCrowNest	FoulCrowNest	3	Act 1 Cast ASoulKiller	Fetish	23	Act 3 H2H BDoomApe	BaboonDemon	22	Act 3 H2H AVileArcher	CorruptRogue	5	Act 1 Miss BSexton	Cantor	22	Act 3 Cast APitViper	ClawViper	22	Act 3 H2H ARatMan	Fetish	10	Act 1 H2H CHellBuzzard	VultureDemon	22	Swarm 2BloodWing	MosquitoDemon	24	Swarm 2BloodHookNest	SuckerNest	17	Act 2 H2H BReturnedMage	Skeleton	8	Act 1 Cast BGloam	WillOWisp	21	Act 3 Wraith APoisonSpinner	EvilSpiders	21	Act 3 H2H ACarverShaman	FallenShaman	6	Act 1 Cast BProwlingDead	ReanimatedHorde	35	Act 5 H2H BMoonClan	Goatmen	4	Act 1 H2H AUrdar	PinHead	32	Act 4 H2H ASpearCat	PantherWoman	15	Act 2 Miss AGrotesqueWyrm	Vile Dog	30	Act 4 Cast ABloodHawkNest	FoulCrowNest	8	Act 1 Cast BTombViper	ClawViper	11	Act 1 H2H CFleshHunter	CorruptRogue	23	Act 3 H2H BFetish	Fetish	21	Act 3 H2H ARockDweller	BaboonDemon	18	Act 2 H2H BReturnedMage	Skeleton	8	Act 1 Cast BOverSeer	OverSeer	33	Act 5 H2H A
+DarkHunter	CorruptRogue	2	Act 1 H2H A
+SpiderMagus	EvilSpiders	23	Act 3 H2H B
+Apparition	Wraith	20	Act 2 Wraith C
+QuillRat	SpikeFiend	1	Quill 1
+TrappedSoul	special	30	Trapped Soul
+Undead RatMan	Fetish	10	Act 1 H2H C
+DefiledWarrior	ReanimatedHorde	42	Act 5 H2H C
+Diablo	Boss	40	Diablo
+SuckerNest	SuckerNest	6	Act 1 H2H B
+Corpulent	Regurgitator	24	Act 4 H2H A
+SaberCat	PantherWoman	15	Act 2 H2H A
+DoomKnight	Undead Horror	24	Act 4 H2H A
+HellCat	PantherWoman	19	Act 2 H2H C
+RazorSpine	SpikeFiend	9	Quill 4
+SandRaider	SandRaider	13	Act 2 H2H A
+HellSwarm	Swarm	22	Swarm 2
+WarpedShaman	FallenShaman	40	Act 5 Cast C
+HorrorMage	Skeleton	17	Act 2 Cast B
+TempleGuard	BaboonDemon	24	Act 3 H2H B
+Groper	Finger Mage	24	Act 4 Wraith A
+BurningDeadMage	Skeleton	14	Act 2 Cast A
+BoneMage	Skeleton	10	Act 1 Cast C
+OblivionKnight	Undead Horror	30	Act 4 H2H B
+FoulCrowNest	FoulCrowNest	3	Act 1 Cast A
+SoulKiller	Fetish	23	Act 3 H2H B
+DoomApe	BaboonDemon	22	Act 3 H2H A
+VileArcher	CorruptRogue	5	Act 1 Miss B
+Sexton	Cantor	22	Act 3 Cast A
+PitViper	ClawViper	22	Act 3 H2H A
+RatMan	Fetish	10	Act 1 H2H C
+HellBuzzard	VultureDemon	22	Swarm 2
+BloodWing	MosquitoDemon	24	Swarm 2
+BloodHookNest	SuckerNest	17	Act 2 H2H B
+ReturnedMage	Skeleton	8	Act 1 Cast B
+Gloam	WillOWisp	21	Act 3 Wraith A
+PoisonSpinner	EvilSpiders	21	Act 3 H2H A
+CarverShaman	FallenShaman	6	Act 1 Cast B
+ProwlingDead	ReanimatedHorde	35	Act 5 H2H B
+MoonClan	Goatmen	4	Act 1 H2H A
+Urdar	PinHead	32	Act 4 H2H A
+SpearCat	PantherWoman	15	Act 2 Miss A
+GrotesqueWyrm	Vile Dog	30	Act 4 Cast A
+BloodHawkNest	FoulCrowNest	8	Act 1 Cast B
+TombViper	ClawViper	11	Act 1 H2H C
+FleshHunter	CorruptRogue	23	Act 3 H2H B
+Fetish	Fetish	21	Act 3 H2H A
+RockDweller	BaboonDemon	18	Act 2 H2H B
+ReturnedMage	Skeleton	8	Act 1 Cast B
+OverSeer	OverSeer	33	Act 5 H2H A
