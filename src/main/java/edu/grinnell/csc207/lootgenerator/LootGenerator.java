@@ -3,6 +3,9 @@ package edu.grinnell.csc207.lootgenerator;
 import java.io.*;
 import java.util.*;
 
+/**
+ * Class used for generating loot from monsters
+ */
 public class LootGenerator {
     static class Monster {
         String name, treasureClass;
@@ -45,6 +48,12 @@ public class LootGenerator {
     static String suffixStr = "";
     static List<String> affixLines = new ArrayList<>();
 
+    /**
+     * Main loop for generating and displaying loot
+     * 
+     * @param args read from command line, not used
+     * @throws IOException if file reading fails
+     */
     public static void main(String[] args) throws IOException {
         // loads text files into its classes
         String base = "data/small/";
@@ -73,7 +82,7 @@ public class LootGenerator {
             generateAffix();
             System.out.println(prefixStr + armor.name + suffixStr); 
             System.out.println("Defense: " + defense);
-            for (int i = 0; i < affixLines.size(); i++){
+            for (int i = 0; i < affixLines.size(); i++) {
                 System.out.println(affixLines.get(i));
             }
 
@@ -83,7 +92,7 @@ public class LootGenerator {
                 System.out.print("Fight again [y/n]? ");
                 choice = input.nextLine();
             }
-            if (choice.equalsIgnoreCase("n")){
+            if (choice.equalsIgnoreCase("n")) {
                 break;
             }
         }
@@ -93,18 +102,23 @@ public class LootGenerator {
     /**
      * Scans a monstats txt file and adds the information into an arraylist
      *
-     * @param String the file path
+     * @param path the file path to the text file
+     * @throws FileNotFoundException if file is not found
      */
     static void loadMonsters(String path) throws FileNotFoundException {
         Scanner sc = new Scanner(new File(path));
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
-            if (line.isBlank()) continue;
+            if (line.isBlank()) {
+                continue;
+            }
             // split into 4 cols - name, type, level, treasureClass
             String[] parts = line.split("\t");
-            if (parts.length < 4) continue;
-            String name           = parts[0];
-            String treasureClass  = parts[3];
+            if (parts.length < 4) {
+                continue;
+            }
+            String name = parts[0];
+            String treasureClass = parts[3];
             monsters.add(new Monster(name, treasureClass));
         }
         sc.close();
@@ -113,16 +127,21 @@ public class LootGenerator {
     /**
      * Scans a treasureclass txt file and adds the information into a map
      *
-     * @param String the file path
+     * @param path the file path to the text file
+     * @throws FileNotFoundException if file is not found
      */
     static void loadTreasureClasses(String path) throws FileNotFoundException {
         Scanner sc = new Scanner(new File(path));
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
-            if (line.isBlank()) continue;
+            if (line.isBlank()) {
+                continue;
+            }
             // split into 4 cols - TC, item1, item2, item3
             String[] parts = line.split("\t", 4);
-            if (parts.length < 4) continue;
+            if (parts.length < 4) {
+                continue;
+            }
             treasureClasses.put(parts[0],
                                  Arrays.asList(parts[1], parts[2], parts[3]));
         }
@@ -132,19 +151,24 @@ public class LootGenerator {
     /**
      * Scans an armor txt file and adds the information into a map
      *
-     * @param String the file path
+     * @param path the file path to the text file
+     * @throws FileNotFoundException if file is not found
      */
     static void loadArmors(String path) throws FileNotFoundException {
         Scanner sc = new Scanner(new File(path));
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
-            if (line.isBlank()) continue;
+            if (line.isBlank()) {
+                continue;
+            }
             // split into 3 cols - name, minac, maxac
             String[] parts = line.split("\t", 3);
-            if (parts.length < 3) continue;
+            if (parts.length < 3) {
+                continue;
+            }
             String name = parts[0];
-            int minac   = Integer.parseInt(parts[1]);
-            int maxac   = Integer.parseInt(parts[2]);
+            int minac = Integer.parseInt(parts[1]);
+            int maxac = Integer.parseInt(parts[2]);
             armors.put(name, new Armor(name, minac, maxac));
         }
         sc.close();
@@ -153,21 +177,26 @@ public class LootGenerator {
     /**
      * Scans an affix txt file and adds the information into a list
      *
-     * @param String the file path
-     * @param List<Affix> the list containing the affixes
+     * @param path the file path to the text file
+     * @param list the list containing the affixes
+     * @throws FileNotFoundException if file is not found
      */
     static void loadAffixes(String path, List<Affix> list) throws FileNotFoundException {
         Scanner sc = new Scanner(new File(path));
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
-            if (line.isBlank()) continue;
+            if (line.isBlank()) {
+                continue;
+            }
             // split into 4 cols - affixName, statText, min, max
             String[] parts = line.split("\t", 4);
-            if (parts.length < 4) continue;
+            if (parts.length < 4) {
+                continue;
+            }
             String name = parts[0];
             String stat = parts[1];
-            int min     = Integer.parseInt(parts[2]);
-            int max     = Integer.parseInt(parts[3]);
+            int min = Integer.parseInt(parts[2]);
+            int max = Integer.parseInt(parts[3]);
             list.add(new Affix(name, stat, min, max));
         }
         sc.close();
@@ -178,7 +207,7 @@ public class LootGenerator {
      * 
      * @return Monster the monster chosen
      */
-    static Monster pickMonster(){
+    static Monster pickMonster() {
         return monsters.get(rand.nextInt(monsters.size()));
     }
 
@@ -186,12 +215,12 @@ public class LootGenerator {
      * Takes a treasureClass and keeps retrieving its items until it gets a 
      * base item
      *
-     * @param String the treasure class
+     * @param tc the treasure class
      * @return String the base item generated
      */
     static String generateBaseItem(String tc) {
         List<String> choices = treasureClasses.get(tc);
-        if (choices == null){ // when it's base item, return the key
+        if (choices == null) { // when it's base item, return the key
             return tc; 
         }
         // when it's not base item, keeps finding a random base item
@@ -202,7 +231,7 @@ public class LootGenerator {
     /**
      * Takes an Armor type of base item and calculates its stat
      *
-     * @param Armor the base item
+     * @param armor the base item
      * @return int the base stat
      */
     static int generateBaseStats(Armor armor) {
@@ -217,7 +246,7 @@ public class LootGenerator {
         prefixStr = "";
         suffixStr = "";
         affixLines.clear();
-        // 50% of generating each, and if generated it calculates a value and adds it on to the base item
+        // 50% of generating each, and if generated it calculates a val and adds it on to base item
         if (rand.nextBoolean() && !prefixes.isEmpty()) {
             Affix p = prefixes.get(rand.nextInt(prefixes.size()));
             int val = rand.nextInt(p.max - p.min + 1) + p.min; // 
